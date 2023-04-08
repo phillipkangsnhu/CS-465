@@ -25,7 +25,7 @@ const renderTravelList = (req, res, responseBody) => {
 const travelList = (req,res) => {
   const path = 'api/trips';
   const requestOptions = {
-    url: `${apiOptions.server}${path}`,
+    url: `${apiOptions.server}/${path}`,
     method: 'GET',
     json: {},
   };
@@ -39,4 +39,8 @@ const travelList = (req,res) => {
       renderTravelList(req,res,body)
     }
   )
+}
+
+module.exports = {
+  travelList
 }
